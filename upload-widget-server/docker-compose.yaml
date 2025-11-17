@@ -1,0 +1,67 @@
+services:
+  pg:
+    image: bitnami/postgresql:latest
+    container_name: pg
+    restart: unless-stopped
+    ports:
+      - $POSTGRES_PORT:$POSTGRES_PORT
+    environment:
+      - POSTGRES_USER=$POSTGRES_USER
+      - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+      - POSTGRES_DB=$POSTGRES_DB
+    volumes:
+      - ./docker:/docker-entrypoint-initdb.d
+      - db:/bitnami/postgresql
+    networks:
+      - db
+      - widget
+
+  vault:
+    image: hashicorp/vault:latest
+    container_name: vault-dev
+    restart: unless-stopped
+    ports:
+      - "8200:8200"
+    environment:
+      VAULT_DEV_ROOT_TOKEN_ID: root
+      VAULT_DEV_LISTEN_ADDRESS: 0.0.0.0:8200
+    cap_add:
+      - IPC_LOCK
+    command: server -dev -dev-root-token-id=root -dev-listen-address=0.0.0.0:8200
+    networks:
+      - vault
+
+  app:
+    build: .
+    depends_on:
+      - pg
+      - vault
+    container_name: upload-widget-server
+    restart: unless-stopped
+    ports:
+      - $PORT:$PORT
+    environment:
+      - CLOUDFLARE_ACCESS_KEY_ID=$CLOUDFLARE_ACCESS_KEY_ID
+      - CLOUDFLARE_SECRET_ACCESS_KEY=$CLOUDFLARE_SECRET_ACCESS_KEY
+      - CLOUDFLARE_BUCKET=$CLOUDFLARE_BUCKET
+      - CLOUDFLARE_ACCOUNT_ID=$CLOUDFLARE_ACCOUNT_ID
+      - CLOUDFLARE_PUBLIC_URL=$CLOUDFLARE_PUBLIC_URL
+      - VAULT_ADDR=$VAULT_ADDR
+      - VAULT_TOKEN=$VAULT_TOKEN
+      - NEW_RELIC_APP_NAME=$NEW_RELIC_APP_NAME
+      - NEW_RELIC_LICENSE_KEY=$NEW_RELIC_LICENSE_KEY
+    networks:
+      - widget
+      - vault
+
+volumes:
+  db:
+    driver: local
+
+networks:
+  widget:
+    driver: bridge
+  db:
+    driver: bridge
+  vault:
+    driver: bridge

@@ -1,0 +1,7 @@
+.DS_Store
+
+upload-widget-server/node_modules
+upload-widget-server/dist
+upload-widget-server/newrelic_agent.log
+upload-widget-server/.env
+upload-widget-server/k8s/secret.yaml
